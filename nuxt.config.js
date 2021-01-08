@@ -10,6 +10,17 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/fun',
+        components: {
+          default: resolve(__dirname, 'pages', 'more-fun', 'fun.vue'),
+        },
+      })
+    },
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
